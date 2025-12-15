@@ -4,7 +4,7 @@ import { RouterView, RouterLink } from 'vue-router'
 
 <template>
 
-    <header class="bg-white shadow p-4">
+    <header class="bg-white shadow p-4 sticky top-0 z-10">
       <h1 class="text-3xl font-bold text-center mb-3">TV Serier</h1>
 
       <nav>
