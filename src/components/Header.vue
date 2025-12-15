@@ -30,9 +30,6 @@ import { RouterView, RouterLink } from 'vue-router'
         </ul>
       </nav>
     </header>
-
-    <main class="p-6 max-w-4xl mx-auto">
       <RouterView />
-    </main>
 
 </template>
