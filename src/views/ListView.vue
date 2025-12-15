@@ -2,9 +2,10 @@
 </script>
 
 <template>
+  <Header />
   <article class="home">
-    <h2>Welcome to TV Serier</h2>
-    <p>Your go-to app for tracking and discovering TV series.</p>
+    <h2>Lägg till tv-serier i listan</h2>
+    <p>Lägg till eller ta bort tv-serier ur listan nedan.</p>
     </article>
 </template>
 

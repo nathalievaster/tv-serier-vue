@@ -1,10 +1,12 @@
 <script setup>
+  import Header from '../components/Header.vue'
 </script>
 
 <template>
+  <Header />
   <article class="home">
-    <h2>Welcome to TV Serier</h2>
-    <p>Your go-to app for tracking and discovering TV series.</p>
+    <h2>Välkommen till tv-serier!</h2>
+    <p>Bla bla bla.</p>
     </article>
 </template>
 
