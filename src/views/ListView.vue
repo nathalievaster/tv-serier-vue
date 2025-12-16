@@ -2,26 +2,28 @@
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
 import SeriesItem from "../components/SeriesItem.vue";
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
-const series = ref([
- {
-  serie: "Stranger Things",
-  _id: 1
- },
-  {
-    serie: "The Crown",
-    _id: 2
-  },
-  {
-    serie: "Breaking Bad",
-    _id: 3
-  },
-  {
-    serie: "The Mandalorian",
-    _id: 4
+const series = ref([])
+
+onMounted (() => {
+  getSeries();
+})
+
+const getSeries = async () => {
+  try {
+    const response = await fetch("https://tv-serier-45iu.onrender.com/series");
+
+    if (response.ok) {
+      const data = await response.json();
+        console.log("data från API:", data);
+
+      series.value = data;
+    }
+  } catch (error) {
+    console.error("Error fetching series:", error);
   }
-]);
+};
 </script>
 
 <template>

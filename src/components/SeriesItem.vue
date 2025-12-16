@@ -1,5 +1,5 @@
 <template>
-    <article> {{ serie.serie }} </article>
+    <article> {{ serie.title }} </article>
 </template>
 
 <script setup>
