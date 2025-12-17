@@ -1,38 +1,34 @@
-# tv-serier-vue
+# TV-serier – Vue SPA
 
-This template should help get you started developing with Vue 3 in Vite.
+Detta är en Single Page Application byggd i Vue 3 där användaren kan visa och lägga till TV-serier via ett eget REST-API. Applikationen är skapad som en del av en skoluppgift.
 
-## Recommended IDE Setup
+## Funktioner
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+* Visa lista med TV-serier
 
-## Recommended Browser Setup
+* Lägga till nya TV-serier
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+* Visa antal säsonger
 
-## Customize configuration
+* Visa om serien är pågående eller avslutad
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+* Enkel formulärvalidering med felmeddelanden
 
-## Project Setup
+* Responsiv design med Tailwind CSS
 
-```sh
-npm install
-```
+## Viktigt att veta (Render)
 
-### Compile and Hot-Reload for Development
+Backend-API:t är hostat på Render (free tier).
+Det innebär att tjänsten kan gå ner i viloläge om den inte används, första anropet kan därför ta upp till 1–2 minuter innan API:t svarar.
 
-```sh
-npm run dev
-```
 
-### Compile and Minify for Production
+## API-endpoint
+GET https://tv-serier-45iu.onrender.com/series
+POST https://tv-serier-45iu.onrender.com/series
 
-```sh
-npm run build
-```
+Exempel på data
+{
+  "title": "The Last of Us",
+  "seasons": 2,
+  "completed": true
+}
