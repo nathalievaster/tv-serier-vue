@@ -23,6 +23,21 @@ const getSeries = async () => {
     console.error("Error fetching series:", error);
   }
 };
+
+const deleteSerie = async (id) => {
+    try {
+      const response = await fetch("https://tv-serier-45iu.onrender.com/series/" + id, {
+        method: "DELETE"
+      });
+
+      if (response.ok) {
+        getSeries();
+      }
+    } catch (error) {
+      console.error("Error deleting serie:", error);
+    }
+
+};
 </script>
 
 <template>
@@ -43,6 +58,7 @@ const getSeries = async () => {
         v-for="serie in series"
         :key="serie._id"
         :serie="serie"
+        @deleteSerie="deleteSerie"
       />
     </section>
   </main>
