@@ -2,6 +2,7 @@
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
 import SeriesItem from "../components/SeriesItem.vue";
+import AddSeries from "../components/AddSeries.vue";
 import { ref, onMounted } from "vue";
 
 const series = ref([])
@@ -51,6 +52,11 @@ const deleteSerie = async (id) => {
       <p class="text-gray-600 mt-2">
         Lägg till eller ta bort tv-serier ur listan nedan.
       </p>
+    </section>
+
+    
+    <section class="mb-6">
+      <AddSeries @seriesAdded="getSeries" />
     </section>
 
     <section>
